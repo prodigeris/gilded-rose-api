@@ -1,0 +1,17 @@
+{
+  "success_url": "/",
+  "env": {
+    "APP_ENV": "prod",
+    "APP_SECRET": {"generator": "vfhCoiVt9u"},
+    "CORS_ALLOW_ORIGIN": "https://",
+    "TRUSTED_HOSTS": "^morning\\-cove\\-55301\\.herokuapp\\.com$"
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}
+
