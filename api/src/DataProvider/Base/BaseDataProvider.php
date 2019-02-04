@@ -2,7 +2,6 @@
 
 namespace App\DataProvider\Base;
 
-use App\DataProvider\GildedRoseStoreDataProvider;
 use App\Entity\ProductBase;
 
 /**
@@ -14,9 +13,8 @@ abstract class BaseDataProvider extends GildedRoseStoreDataProvider implements H
 {
     public function getItem(string $resourceClass, $id, string $operationName = null, array $context = []): ?ProductBase
     {
-        $products = $this->gilded_rose_store->getProductsOfType(static::getOriginalClass());
+        $products = $this->gilded_rose_product_list->getProductsOfType(static::getOriginalClass());
 
         return isset($products[$id]) ? new $resourceClass($id, $products[$id]) : null;
     }
-
 }

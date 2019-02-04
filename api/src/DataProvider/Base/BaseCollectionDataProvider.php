@@ -2,8 +2,6 @@
 
 namespace App\DataProvider\Base;
 
-use App\DataProvider\GildedRoseStoreDataProvider;
-
 /**
  * Class GildedRoseCollectionDataProvider
  *
@@ -13,7 +11,7 @@ abstract class BaseCollectionDataProvider extends GildedRoseStoreDataProvider im
 {
     public function getCollection(string $resourceClass, string $operationName = null): \Generator
     {
-        $products = $this->gilded_rose_store->getProductsOfType(static::getOriginalClass());
+        $products = $this->gilded_rose_product_list->getProductsOfType(static::getOriginalClass());
 
         foreach ($products as $id => $product) {
             yield new $resourceClass($id, $product);

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\DataProvider;
+namespace App\DataProvider\Base;
 
+use App\GildedRose\GildedRoseProductList;
 use App\GildedRose\GildedRoseStore;
 
 /**
@@ -12,12 +13,17 @@ use App\GildedRose\GildedRoseStore;
 abstract class GildedRoseStoreDataProvider
 {
     /**
-     * @var \App\GildedRose\GildedRoseStore
+     * @var \App\GildedRose\GildedRoseProductList
      */
-    protected $gilded_rose_store;
+    protected $gilded_rose_product_list;
 
-    public function __construct(GildedRoseStore $gildedRoseStore)
+    /**
+     * GildedRoseStoreDataProvider constructor.
+     *
+     * @param \App\GildedRose\GildedRoseProductList $gildedRoseProductList
+     */
+    public function __construct(GildedRoseProductList $gildedRoseProductList)
     {
-        $this->gilded_rose_store = $gildedRoseStore;
+        $this->gilded_rose_product_list = $gildedRoseProductList;
     }
 }
