@@ -25,3 +25,7 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    # Load the Gilded Rose
+    app.gilded_rose_store:
+        class: App\GildedRose\GildedRoseStore
