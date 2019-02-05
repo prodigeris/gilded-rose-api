@@ -18,12 +18,18 @@ abstract class GildedRoseStoreDataProvider
     protected $gilded_rose_product_list;
 
     /**
+     * @var \App\GildedRose\GildedRoseStore
+     */
+    private $gilded_rose;
+
+    /**
      * GildedRoseStoreDataProvider constructor.
      *
      * @param \App\GildedRose\GildedRoseProductList $gildedRoseProductList
      */
-    public function __construct(GildedRoseProductList $gildedRoseProductList)
+    public function __construct(GildedRoseProductList $gildedRoseProductList, GildedRoseStore $gildedRoseStore)
     {
         $this->gilded_rose_product_list = $gildedRoseProductList;
+        $this->gilded_rose = $gildedRoseStore;
     }
 }

@@ -29,7 +29,7 @@ class GildedRoseStorage
     }
 
     /**
-     *
+     *  Init items
      */
     protected function initItems()
     {
